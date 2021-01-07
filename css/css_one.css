@@ -1,0 +1,157 @@
+/* CONFIGURAÇÕES PRINCIPAIS */
+
+body {
+    background: white;
+    margin: 0 auto;
+    padding: 0 auto;
+    font-family: Trebuchet MS, sans-serif;
+    color: black;
+}
+
+
+/* EDIÇÕES DOS TEXTOS */
+
+.title {
+    color: blueviolet;
+    font-size: 26px;
+    padding-left: 25px;
+}
+
+.paragrafo {
+    font-size: 18px;
+    padding-left: 35px;
+    padding-right: 35px;
+    text-align: justify;
+}
+
+
+/* ANIMAÇÃO DE ENTRADA */
+
+.animation {
+    opacity: 0;
+    transform: translate3d(-100, 0, 0);
+    transition: 1s;
+}
+
+.animation__start {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* MENU SUPERIOR */
+
+.menu {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(89, 27, 148);
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu__superior {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+}
+
+.menu__superior--itens a {
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+    padding: 1ch;
+    margin-left: 10px;
+}
+
+.menu__superior--itens a:hover {
+    border-radius: 7px;
+    background: white;
+    font-size: 18px;
+    text-decoration: none;
+    color: blueviolet;
+    padding: 1.1ch;
+    margin-left: 10px;
+}
+
+
+/* ITENS DO CORPO */
+
+.corpo__itens {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.corpo__itens--edit {
+    width: 70%;
+    background: rgba(128, 128, 128, 0.424);
+    border-radius: 15px;
+}
+
+
+/* HOME */
+
+.corpo {
+    width: 100%;
+}
+
+.corpo__home--edit {
+    width: 70%;
+}
+
+.corpo__home--edit p {
+    font-size: 18px;
+    padding-left: 45px;
+}
+
+.corpo__home--edit b {
+    color: blueviolet;
+}
+
+
+/* FOOTER */
+
+.final__site {
+    width: 100%;
+    height: 100px;
+    background: rgb(89, 27, 148);
+    position: relative;
+}
+
+.final__site--text {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+}
+
+.final__site--text h2 {
+    color: white;
+    font-size: 14px;
+}
+
+.redes__sociais {
+    margin: 0 auto;
+    position: absolute;
+    top: 10px;
+    right: 200px;
+}
+
+.redes__sociais a {
+    padding: 5px;
+}
+
+.redes__sociais i {
+    color: white;
+    font-size: 50px;
+}
