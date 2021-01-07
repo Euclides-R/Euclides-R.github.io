@@ -1,9 +1,10 @@
 /* CONFIGURAÇÕES PRINCIPAIS */
 
 body {
+    width: auto;
     background: white;
-    margin: 0 auto;
-    padding: 0 auto;
+    margin: 0;
+    padding: 0;
     font-family: Trebuchet MS, sans-serif;
     color: black;
 }
@@ -44,7 +45,7 @@ body {
 .menu {
     position: relative;
     top: 0;
-    width: 100%;
+    width: auto;
     height: 100px;
     background: rgb(89, 27, 148);
     color: white;
