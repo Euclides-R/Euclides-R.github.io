@@ -1,18 +1,25 @@
 //IDENTIFICAR O CLIQUE DO MENU
-const menuItens = document.querySelectorAll('.menu a[href^="#"]');
+const menuItens = document.querySelectorAll('.menu a');
 
 menuItens.forEach(item => {
     item.addEventListener('click', scrollToIdOnClick);
 })
 
+function getScrollTopByHref(element) {
+    const id = element.getAttribute('href');
+    return document.querySelector(id).offsetTop;
+}
+
 function scrollToIdOnClick(event) {
     event.preventDefault();
-    const element = event.target;
-    const id = element.getAttribute('href');
-    const to = document.querySelector(id).offsetTop;
+    const to = getScrollTopByHref(event.target) - 100;
 
+    scrollToPosition(to);
+}
+
+function scrollToPosition(to) {
     window.scroll({
-        top: to - 100,
+        top: to,
         behavior: "smooth",
     });
 }
