@@ -1,16 +1,21 @@
 //IDENTIFICAR O CLIQUE DO MENU
-$('nav a').click(function() {
-    e.preventDefault();
-    //VERIFICAR O ITEM QUE FOI CLICADO E FAZER REFERÊNCIA AO ALVO
-    var id = $(this).attr('href'),
-        //VERIFICAR A DISTÂNCIA ENTRE O ALVO E O TOPO
-        targetOffSet = $(id).offset(),
-        menuHeight = $('nav').innerHeight();
-    $('html, body').animate({
-        //ANIMAR O SCROLL ATÉ O ALVO
-        scrollTop: targetOffSet - menuHeight
-    }, 1000)
-});
+const menuItens = document.querySelectorAll('.menu a[href^="#"]');
+
+menuItens.forEach(item => {
+    item.addEventListener('click', scrollToIdOnClick);
+})
+
+function scrollToIdOnClick(event) {
+    event.preventDefault();
+    const element = event.target;
+    const id = element.getAttribute('href');
+    const to = document.querySelector(id).offsetTop;
+
+    window.scroll({
+        top: to - 100,
+        behavior: "smooth",
+    });
+}
 
 //IDENTIFICAR QUANDO O USUÁRIO UTILIZA O SCROLL
 //CALCULAR A DISTÂNCIA TOPO DA PÁGINA E O SCROLL
@@ -18,6 +23,8 @@ $('nav a').click(function() {
 //COMPARAR AS DUAS DISTÂNCIAS ANTERIORES
 //ADICIONAR UMA CLASSE COM CSS ANIMATION OU TRANSITION AO ELEMENTO ANIMADO
 // Debounce do Lodash
+
+
 debounce = function(func, wait, immediate) {
     var timeout;
     return function() {
