@@ -13,7 +13,7 @@ body {
 /* EDIÇÕES DOS TEXTOS */
 
 .title {
-    color: blueviolet;
+    color: rgb(0, 79, 128);
     font-size: 26px;
     padding-left: 25px;
 }
@@ -30,13 +30,15 @@ body {
 
 .animation {
     opacity: 0;
-    transform: translate(-100, 0, 0);
-    transition: .3s;
+    position: relative;
+    right: 70%;
+    transition: right 200ms;
 }
 
 .animation__start {
+    right: 0%;
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: scaleX(1);
 }
 
 
@@ -47,10 +49,24 @@ body {
     top: 0;
     width: auto;
     height: 100px;
-    background: rgb(89, 27, 148);
+    background: rgb(0, 79, 128);
     color: white;
     display: flex;
     flex-direction: row;
+}
+
+.img_name {
+    width: 300px;
+    position: absolute;
+    left: 250px;
+}
+
+.menu__superior--div {
+    width: auto;
+    height: 30px;
+    position: absolute;
+    top: 40px;
+    right: 250px;
 }
 
 .menu__superior {
@@ -60,7 +76,7 @@ body {
     justify-content: center;
     align-items: center;
     list-style: none;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .menu__superior--itens a {
@@ -74,9 +90,10 @@ body {
 .menu__superior--itens a:hover {
     border-radius: 7px;
     background: white;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
-    color: blueviolet;
+    color: rgb(0, 79, 128);
+    font-weight: bold;
     padding: 1.1ch;
     margin-left: 10px;
 }
@@ -117,7 +134,7 @@ body {
 }
 
 .corpo__home--edit b {
-    color: blueviolet;
+    color: rgb(0, 79, 128);
 }
 
 
@@ -126,7 +143,7 @@ body {
 .final__site {
     width: 100%;
     height: 100px;
-    background: rgb(89, 27, 148);
+    background: rgb(0, 79, 128);
     position: relative;
 }
 
