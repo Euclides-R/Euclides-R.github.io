@@ -185,6 +185,32 @@ body {
     font-size: 30px;
 }
 
+.face:hover {
+    font-size: 32px;
+    transition: .1s;
+    color: rgb(83, 163, 255);
+}
+
+.inst:hover {
+    font-size: 32px;
+    transition: .1s;
+    background: -webkit-linear-gradient(rgb(255, 177, 87), rgb(255, 60, 167));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.linkedin:hover {
+    font-size: 32px;
+    transition: .1s;
+    color: rgb(0, 130, 216);
+}
+
+.git:hover {
+    font-size: 32px;
+    transition: .1s;
+    color: #888;
+}
+
 
 /* WHATSAPP */
 
