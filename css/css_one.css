@@ -27,16 +27,29 @@ body {
 /* ANIMAÇÃO DE ENTRADA */
 
 .animation {
-  opacity: 0;
   position: relative;
+  opacity: 0;
   right: 70%;
-  transition: right 200ms;
+  transform: scaleX(0);
 }
 
 .animation__start {
-  right: 0%;
+  position: relative;
   opacity: 1;
+  right: 0;
   transform: scaleX(1);
+  transition: 2s;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 79, 128, 0.548);
+  color: white;
+  display: flex;
+  z-index: 1000;
 }
 
 /* MENU SUPERIOR */
@@ -45,19 +58,18 @@ body {
   position: relative;
   top: 0;
   width: 100%;
-  height: 70px;
+  height: 80px;
   background: rgb(0, 79, 128);
   color: white;
   display: flex;
-  flex-direction: row;
   z-index: 1000;
 }
 
 .menu__superior--div {
-  width: auto;
-  height: 30px;
-  margin: auto;
-  margin-top: 15px;
+  width: 100%;
+  margin: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -67,34 +79,35 @@ body {
 
 .menu__superior {
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   list-style: none;
+}
+
+.menu__superior--itens {
+  display: flex;
   font-size: 16px;
+  width: auto;
 }
 
 .menu__superior--itens a {
-  border-radius: 7px;
+  text-align: center;
+  padding: 10px;
   text-decoration: none;
   color: white;
-  padding: 1ch;
-  margin-left: 10px;
 }
 
 .menu__superior--itens a:hover {
-  transition: 0.2s;
-  border-radius: 7px;
-  background: white;
-  font-size: 18px;
-  text-decoration: none;
   color: rgb(0, 79, 128);
+  background: white;
+  transition: 0.3s;
   font-weight: bold;
-  padding: 1.1ch;
-  margin-left: 10px;
+  border-radius: 10px;
 }
-
 /* ITENS DO CORPO */
 
 .corpo__itens {
@@ -159,14 +172,21 @@ body {
 }
 
 .redes__sociais {
-  margin: 0 auto;
+  width: 10em;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 10px;
   right: 200px;
 }
 
 .redes__sociais a {
-  padding: 5px;
+  width: 25px;
+  height: 40px;
+  margin: 5px;
 }
 
 .redes__sociais i {
@@ -219,4 +239,24 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+
+/* SCROLL */
+/* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
+e 10px de altura para a barra horizontal */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+::-webkit-scrollbar-track {
+  background: rgba(119, 119, 119, 0.618);
+}
+
+/* aqui é a alça da barra, que demonstra a altura que você está na página
+  estou colocando uma cor azul clara nela*/
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  width: 5px;
+  background: rgb(0, 79, 128);
 }
