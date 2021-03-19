@@ -1,31 +1,16 @@
 'use strict';
-// Link scroll
-
+// Declaration DOM
+const menu = document.querySelector('.menu');
 const corpoItens = document.querySelectorAll('.corpo__itens');
-const menuItens = document.querySelectorAll('.menu a');
 
-menuItens.forEach(item => {
-  item.addEventListener('click', scrollToIdOnClick);
-});
-
-function getScrollTopByHref(element) {
-  const id = element.getAttribute('href');
-  return document.querySelector(id).offsetTop;
-}
-
-function scrollToIdOnClick(event) {
-  event.preventDefault();
-  const to = getScrollTopByHref(event.target) - 190;
-
-  scrollToPosition(to);
-}
-
-function scrollToPosition(to) {
-  window.scroll({
-    top: to,
-    behavior: 'smooth',
+// Link scroll
+document.querySelectorAll('.menu__superior--itens a').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = this.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   });
-}
+});
 
 //  Animation CSS
 window.addEventListener('scroll', function () {
@@ -39,16 +24,4 @@ window.addEventListener('scroll', function () {
       item.classList.remove('animation__start');
     }
   });
-});
-
-// Nav fixed
-const menu = document.querySelector('.menu');
-const navFixed = document.getElementById('home').getBoundingClientRect();
-
-window.addEventListener('scroll', function () {
-  if (window.scrollY > navFixed.top) {
-    menu.classList.add('sticky');
-  } else {
-    menu.classList.remove('sticky');
-  }
 });

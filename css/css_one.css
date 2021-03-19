@@ -38,18 +38,7 @@ body {
   opacity: 1;
   right: 0;
   transform: scaleX(1);
-  transition: 2s;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background: rgba(0, 79, 128, 0.548);
-  color: white;
-  display: flex;
-  z-index: 1000;
+  transition: 1s, opacity 1s;
 }
 
 /* MENU SUPERIOR */
@@ -63,6 +52,11 @@ body {
   color: white;
   display: flex;
   z-index: 1000;
+}
+
+.menu .sticky {
+  position: fixed;
+  background: rgba(0, 79, 128, 0.548);
 }
 
 .menu__superior--div {
